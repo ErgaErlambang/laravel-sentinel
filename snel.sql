@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 30, 2018 at 03:15 PM
--- Server version: 10.1.34-MariaDB
--- PHP Version: 5.6.37
+-- Waktu pembuatan: 02 Sep 2018 pada 21.40
+-- Versi server: 10.1.34-MariaDB
+-- Versi PHP: 5.6.37
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `activations`
+-- Struktur dari tabel `activations`
 --
 
 CREATE TABLE `activations` (
@@ -39,7 +39,7 @@ CREATE TABLE `activations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `activations`
+-- Dumping data untuk tabel `activations`
 --
 
 INSERT INTO `activations` (`id`, `user_id`, `code`, `completed`, `completed_at`, `created_at`, `updated_at`) VALUES
@@ -52,7 +52,7 @@ INSERT INTO `activations` (`id`, `user_id`, `code`, `completed`, `completed_at`,
 -- --------------------------------------------------------
 
 --
--- Table structure for table `karyawans`
+-- Struktur dari tabel `karyawans`
 --
 
 CREATE TABLE `karyawans` (
@@ -65,22 +65,21 @@ CREATE TABLE `karyawans` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `karyawans`
+-- Dumping data untuk tabel `karyawans`
 --
 
 INSERT INTO `karyawans` (`id`, `nama`, `alamat`, `phone`, `created_at`, `updated_at`) VALUES
-(6, 'Dimas aprinaldi', 'JL. PSM', '0123456', '2018-08-30 05:56:58', '2018-08-30 05:56:58'),
-(7, 'Erga Erlambang', 'Jl.Cibangkong', '0123456789', '2018-08-30 05:57:13', '2018-08-30 05:57:13'),
-(8, 'Budi', 'jl pasirluyu', '08765542', '2018-08-30 05:57:39', '2018-08-30 05:57:39'),
-(9, 'dinar', 'jl. jawa', '08765542123', '2018-08-30 05:57:55', '2018-08-30 05:57:55'),
-(10, 'siti marwati', 'jl. jakarta', '089684521', '2018-08-30 05:58:11', '2018-08-30 05:58:11'),
-(11, 'ahmad dani', 'jl. jakarta 2', '56654442', '2018-08-30 05:58:35', '2018-08-30 05:58:35'),
-(12, 'Julandi', 'jl.pasawahan', '058971235', '2018-08-30 05:59:04', '2018-08-30 05:59:04');
+(13, 'Dimas', 'Jl.yUWXHy4JHE', '+6289397494', '2018-09-02 12:19:01', '2018-09-02 12:19:01'),
+(14, 'Budi', 'Jl.D9JyAjIIZq6R5', '+6244464062', '2018-09-02 12:19:01', '2018-09-02 12:19:01'),
+(15, 'Reno', 'Jl.O79OtK8XNe', '+6286311781', '2018-09-02 12:19:01', '2018-09-02 12:19:01'),
+(16, 'Vitra', 'Jl.EJYaRHacOY6ecm', '+6235036359', '2018-09-02 12:19:01', '2018-09-02 12:19:01'),
+(17, 'Ajeng', 'Jl.BDfjUWQZuXGLljG', '+6230801096', '2018-09-02 12:19:01', '2018-09-02 12:19:01'),
+(18, 'Bayu', 'Jl.N8LwQaPxq4GmEGH', '+6262480548', '2018-09-02 12:19:01', '2018-09-02 12:19:01');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `migrations`
+-- Struktur dari tabel `migrations`
 --
 
 CREATE TABLE `migrations` (
@@ -90,20 +89,18 @@ CREATE TABLE `migrations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `migrations`
+-- Dumping data untuk tabel `migrations`
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (5, '2014_07_02_230147_migration_cartalyst_sentinel', 1),
 (6, '2018_08_30_024448_Product', 1),
-(7, '2018_08_30_050141_create_items_table', 2),
-(9, '2018_08_30_083400_karyawan', 3),
 (12, '2018_08_30_095839_create_karyawans', 4);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `persistences`
+-- Struktur dari tabel `persistences`
 --
 
 CREATE TABLE `persistences` (
@@ -115,7 +112,7 @@ CREATE TABLE `persistences` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `persistences`
+-- Dumping data untuk tabel `persistences`
 --
 
 INSERT INTO `persistences` (`id`, `user_id`, `code`, `created_at`, `updated_at`) VALUES
@@ -128,12 +125,14 @@ INSERT INTO `persistences` (`id`, `user_id`, `code`, `created_at`, `updated_at`)
 (21, 1, 'wMf4PrHkdWBpTbv52xurAEDxjcKclH39', '2018-08-30 02:15:24', '2018-08-30 02:15:24'),
 (24, 2, 'f4ercT5pTtPIGf7IxIo7dozwXnUxjgEp', '2018-08-30 03:12:17', '2018-08-30 03:12:17'),
 (43, 1, 'FKxBpFtvKuftRBx0p4ObX6W5dXmePXJP', '2018-08-30 05:01:18', '2018-08-30 05:01:18'),
-(54, 2, 'QAD2HCqtxTEmWBgRpaQ0ouJhhRiHeRnr', '2018-08-30 06:14:54', '2018-08-30 06:14:54');
+(54, 2, 'QAD2HCqtxTEmWBgRpaQ0ouJhhRiHeRnr', '2018-08-30 06:14:54', '2018-08-30 06:14:54'),
+(56, 3, 'FaETsueHu21HPmDdv6l1O4Pe8rhxIm6p', '2018-09-02 11:45:25', '2018-09-02 11:45:25'),
+(57, 3, 'N6MUASl19woKWcRfgPYCTVjNSvZkQexZ', '2018-09-02 12:08:01', '2018-09-02 12:08:01');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `products`
+-- Struktur dari tabel `products`
 --
 
 CREATE TABLE `products` (
@@ -145,7 +144,7 @@ CREATE TABLE `products` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `products`
+-- Dumping data untuk tabel `products`
 --
 
 INSERT INTO `products` (`id`, `name`, `details`, `created_at`, `updated_at`) VALUES
@@ -162,7 +161,7 @@ INSERT INTO `products` (`id`, `name`, `details`, `created_at`, `updated_at`) VAL
 -- --------------------------------------------------------
 
 --
--- Table structure for table `reminders`
+-- Struktur dari tabel `reminders`
 --
 
 CREATE TABLE `reminders` (
@@ -178,7 +177,7 @@ CREATE TABLE `reminders` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `roles`
+-- Struktur dari tabel `roles`
 --
 
 CREATE TABLE `roles` (
@@ -191,7 +190,7 @@ CREATE TABLE `roles` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `roles`
+-- Dumping data untuk tabel `roles`
 --
 
 INSERT INTO `roles` (`id`, `slug`, `name`, `permissions`, `created_at`, `updated_at`) VALUES
@@ -202,7 +201,7 @@ INSERT INTO `roles` (`id`, `slug`, `name`, `permissions`, `created_at`, `updated
 -- --------------------------------------------------------
 
 --
--- Table structure for table `role_users`
+-- Struktur dari tabel `role_users`
 --
 
 CREATE TABLE `role_users` (
@@ -213,7 +212,7 @@ CREATE TABLE `role_users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `role_users`
+-- Dumping data untuk tabel `role_users`
 --
 
 INSERT INTO `role_users` (`user_id`, `role_id`, `created_at`, `updated_at`) VALUES
@@ -226,7 +225,7 @@ INSERT INTO `role_users` (`user_id`, `role_id`, `created_at`, `updated_at`) VALU
 -- --------------------------------------------------------
 
 --
--- Table structure for table `throttle`
+-- Struktur dari tabel `throttle`
 --
 
 CREATE TABLE `throttle` (
@@ -239,7 +238,7 @@ CREATE TABLE `throttle` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `throttle`
+-- Dumping data untuk tabel `throttle`
 --
 
 INSERT INTO `throttle` (`id`, `user_id`, `type`, `ip`, `created_at`, `updated_at`) VALUES
@@ -249,7 +248,7 @@ INSERT INTO `throttle` (`id`, `user_id`, `type`, `ip`, `created_at`, `updated_at
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Struktur dari tabel `users`
 --
 
 CREATE TABLE `users` (
@@ -266,13 +265,13 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `users`
+-- Dumping data untuk tabel `users`
 --
 
 INSERT INTO `users` (`id`, `email`, `password`, `permissions`, `last_login`, `first_name`, `last_name`, `location`, `created_at`, `updated_at`) VALUES
-(1, 'admin@mail.com', '$2y$10$pFdBBxZZQlolrM5wln9Hn.p2VrH4/jDnlvwx88yzaDVrPfQwOGqlK', NULL, '2018-08-30 06:06:14', 'Admin', 'Tes', 'Bandung', '2018-08-29 20:33:20', '2018-08-30 06:06:14'),
+(1, 'admin@mail.com', '$2y$10$pFdBBxZZQlolrM5wln9Hn.p2VrH4/jDnlvwx88yzaDVrPfQwOGqlK', NULL, '2018-09-02 11:34:01', 'Admin', 'Tes', 'Bandung', '2018-08-29 20:33:20', '2018-09-02 11:34:01'),
 (2, 'manager@mail.com', '$2y$10$Av0c.12EwbjqseihI2vJ5uAlqAYuD2guA6DOjxYVeXr.gTY/UzShG', NULL, '2018-08-30 06:14:54', 'manager', 'test', 'Jakarta', '2018-08-29 20:35:20', '2018-08-30 06:14:54'),
-(3, 'visitor@mail.com', '$2y$10$3JSL0Ce2SYbPhoZo5imRFu1ftK1qHMqNbXcDXLrPiT5EdT9IKx/mW', NULL, '2018-08-30 05:38:51', 'Visitor', ' Test', 'Surabaya', '2018-08-29 20:37:14', '2018-08-30 05:38:51'),
+(3, 'visitor@mail.com', '$2y$10$3JSL0Ce2SYbPhoZo5imRFu1ftK1qHMqNbXcDXLrPiT5EdT9IKx/mW', NULL, '2018-09-02 12:08:01', 'Visitor', ' Test', 'Surabaya', '2018-08-29 20:37:14', '2018-09-02 12:08:01'),
 (5, 'test@visitor', '$2y$10$0sXgS5qfPC5DUWfZn6jNnOsK4OwABjUr8maMcyk7/gdwsncZQwAbC', NULL, '2018-08-30 06:05:58', 'test', 'visitor', 'bandung', '2018-08-30 06:05:24', '2018-08-30 06:05:58');
 
 --
@@ -280,111 +279,111 @@ INSERT INTO `users` (`id`, `email`, `password`, `permissions`, `last_login`, `fi
 --
 
 --
--- Indexes for table `activations`
+-- Indeks untuk tabel `activations`
 --
 ALTER TABLE `activations`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `karyawans`
+-- Indeks untuk tabel `karyawans`
 --
 ALTER TABLE `karyawans`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `migrations`
+-- Indeks untuk tabel `migrations`
 --
 ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `persistences`
+-- Indeks untuk tabel `persistences`
 --
 ALTER TABLE `persistences`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `persistences_code_unique` (`code`);
 
 --
--- Indexes for table `reminders`
+-- Indeks untuk tabel `reminders`
 --
 ALTER TABLE `reminders`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `roles`
+-- Indeks untuk tabel `roles`
 --
 ALTER TABLE `roles`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `roles_slug_unique` (`slug`);
 
 --
--- Indexes for table `role_users`
+-- Indeks untuk tabel `role_users`
 --
 ALTER TABLE `role_users`
   ADD PRIMARY KEY (`user_id`,`role_id`);
 
 --
--- Indexes for table `throttle`
+-- Indeks untuk tabel `throttle`
 --
 ALTER TABLE `throttle`
   ADD PRIMARY KEY (`id`),
   ADD KEY `throttle_user_id_index` (`user_id`);
 
 --
--- Indexes for table `users`
+-- Indeks untuk tabel `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `users_email_unique` (`email`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `activations`
+-- AUTO_INCREMENT untuk tabel `activations`
 --
 ALTER TABLE `activations`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `karyawans`
+-- AUTO_INCREMENT untuk tabel `karyawans`
 --
 ALTER TABLE `karyawans`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
--- AUTO_INCREMENT for table `migrations`
+-- AUTO_INCREMENT untuk tabel `migrations`
 --
 ALTER TABLE `migrations`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
--- AUTO_INCREMENT for table `persistences`
+-- AUTO_INCREMENT untuk tabel `persistences`
 --
 ALTER TABLE `persistences`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
 
 --
--- AUTO_INCREMENT for table `reminders`
+-- AUTO_INCREMENT untuk tabel `reminders`
 --
 ALTER TABLE `reminders`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `roles`
+-- AUTO_INCREMENT untuk tabel `roles`
 --
 ALTER TABLE `roles`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `throttle`
+-- AUTO_INCREMENT untuk tabel `throttle`
 --
 ALTER TABLE `throttle`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT untuk tabel `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
