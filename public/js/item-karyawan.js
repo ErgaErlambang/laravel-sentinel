@@ -67,7 +67,7 @@ function manageRow(data) {
         rows = rows + '<td>'+value.phone+'</td>';
 	  	rows = rows + '<center><td data-id="'+value.id+'">';
         rows = rows + '<button data-toggle="modal" data-target="#edit-item" class="btn btn-primary edit-item"><i class="fa fa-edit"></i> Edit</button> ';
-        rows = rows + '<button class="btn btn-danger remove-item">Delete <i class="fa fa-trash"></i></button>';
+        rows = rows + '<button class="btn btn-danger remove-item" >Delete <i class="fa fa-trash"></i></button>';
         rows = rows + '</td></center>';
 	  	rows = rows + '</tr>';
 	});
@@ -103,7 +103,7 @@ $(".crud-submit").click(function(e){
 
 
 /* Remove Item */
-$("body").on("click",".remove-item",function(){
+ $("body").on("click",".remove-item",function(){
     var id = $(this).parent("td").data('id');
     var c_obj = $(this).parents("tr");
     $.ajax({
@@ -111,11 +111,14 @@ $("body").on("click",".remove-item",function(){
         type:'delete',
         url: url + '/' + id,
     }).done(function(data){
-        c_obj.remove();
-        toastr.success('Item Deleted Successfully.', 'Success Alert', {timeOut: 1000});
-        getPageData();
+            c_obj.remove();
+            toastr.success('Item Deleted Successfully.', 'Success Alert', {timeOut: 1000});
+            getPageData();
     });
 });
+     
+
+
 
 
 /* Edit Item */
@@ -153,3 +156,4 @@ $(".crud-submit-edit").click(function(e){
         toastr.success('Item Updated Successfully.', 'Success Alert', {timeOut: 1000});
     });
 });
+

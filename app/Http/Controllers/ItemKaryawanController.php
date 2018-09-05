@@ -59,6 +59,9 @@ class ItemKaryawanController extends Controller
      */
     public function destroy($id)
     {
+    	function test() {
+    		return confirm ('test');
+    	}
         Karyawan::find($id)->delete();
         return response()->json(['done']);
     }

@@ -11,14 +11,18 @@ class KaryawanSeeder extends Seeder
      */
     public function run()
     {
+        $random = Faker\Factory::create();
          DB::table('karyawans')->insert([
         [
         	'nama' => 'Dimas',
-        	'alamat' => 'Jl.'.str_random('10'),
-        	'phone' => '+62'. mt_rand(1000000, 99999999),
+            'alamat' => $random->address,
+        	//'alamat' => 'Jl.'.str_random('10'),
+            'phone' => $random->phoneNumber,
+        	//'phone' => '+62'. mt_rand(1000000, 99999999),
         	'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
         ],
+
         [
         	'nama' => 'Budi',
         	'alamat' => 'Jl.'.str_random('13'),
@@ -26,6 +30,7 @@ class KaryawanSeeder extends Seeder
         	'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
         ],
+
         [
             'nama' => 'Reno',
         	'alamat' => 'Jl.'.str_random('10'),
@@ -33,6 +38,7 @@ class KaryawanSeeder extends Seeder
         	'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
         ],
+
         [
             'nama' => 'Vitra',
         	'alamat' => 'Jl.'.str_random('14'),
@@ -40,6 +46,7 @@ class KaryawanSeeder extends Seeder
         	'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
         ],
+
         [
             'nama' => 'Ajeng',
         	'alamat' => 'Jl.'.str_random('15'),
@@ -47,6 +54,7 @@ class KaryawanSeeder extends Seeder
         	'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
         ],
+
         [
         	'nama' => 'Bayu',
         	'alamat' => 'Jl.'.str_random('15'),

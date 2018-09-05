@@ -110,6 +110,36 @@
 						</div>
 		      		</form>
 
+		      		<!-- Delete -->
+		<div class="modal fade" id="edit-item" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+		        <h4 class="modal-title" id="myModalLabel">Delete Data</h4>
+		      </div>
+		      <div class="modal-body">
+
+		      		<form data-toggle="validator" action="/item-karyawan/14" method="put">
+		      			<div class="form-group">
+							<label class="control-label" for="title">Nama :</label>
+							<input type="text" name="nama" class="form-control" data-error="Masukan Nama." disabled />
+						<div class="help-block with-errors"></div>
+							<label class="control-label" for="title">Alamat :</label>
+							<input type="text" name="alamat" class="form-control" disabled />
+							<div class="help-block with-errors"></div>
+						</div>
+						<div class="form-group">
+							<label class="control-label" for="title">No Telepon (Optional) :</label>
+							<input type="text" name="phone" class="form-control" disabled />
+							<div class="help-block with-errors"></div>
+						</div>
+						<div class="form-group">
+							<button type="submit" class="form-control btn btn-success crud-submit-edit">Submit</button>
+						</div>
+		      		</form>
+
+
 		      </div>
 		    </div>
 		  </div>
