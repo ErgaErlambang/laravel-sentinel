@@ -3,24 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Karyawan;
-class ItemKaryawanController extends Controller
+use App\CrudModel;
+class CrudController extends Controller
 {
-    public function manageItemKaryawan()
-    {
-        return view('manage-item-karyawan');
-    }
 
-
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index(Request $request)
     {
-        $items = Karyawan::latest()->paginate(5);
-        return response()->json($items);
+        $crud = CrudModel::all();
+        return view('index')->with(['cruds' => $crud]);
+
     }
 
 
@@ -32,7 +23,7 @@ class ItemKaryawanController extends Controller
      */
     public function store(Request $request)
     {
-        $create = Karyawan::create($request->all());
+        $create = CrudModel::create($request->all());
         return response()->json($create);
     }
 
@@ -46,8 +37,8 @@ class ItemKaryawanController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $edit = Karyawan::find($id)->update($request->all());
-        return response()->json($edit);
+        $update = CrudModel::find($id)->update($request->all());
+        return response()->json($update);
     }
 
 
@@ -59,10 +50,7 @@ class ItemKaryawanController extends Controller
      */
     public function destroy($id)
     {
-    	function test() {
-    		return confirm ('test');
-    	}
-        Karyawan::find($id)->delete();
+        CrudModel::find($id)->delete();
         return response()->json(['done']);
     }
 }
