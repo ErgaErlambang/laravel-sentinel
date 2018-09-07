@@ -38,7 +38,7 @@
 			</div>
   		</form>
 	</div>
-   
+
 	<br>
 	<div class="container">
 		<h2 class="text-muted"> Daftar User </h2>
@@ -71,7 +71,7 @@
 		<div id="snackbar_del">Proses Menghapus....</div>
 		 Snackbar Edit
 		<div id="snackbar_edit">Proses Editing....</div>
-		 Snackbar Create 
+		 Snackbar Create
 		<div id="snackbar_add">Proses Register....</div -->
 
 		<!-- Edit Item Modal -->
@@ -98,7 +98,7 @@
 							</div>
 			      		</form>
 			      	</div>
-			    </div>	
+			    </div>
 			 </div>
 		</div>
 	</div>
@@ -119,7 +119,7 @@
 // $(document).ready(function(){
 // 	$('.loading2').hide();
 // })
-	
+
 $.ajaxSetup({
     headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -149,12 +149,12 @@ $.ajaxSetup({
 
 
 /* Create new Item */
-$(".crud-submit").click(function(){
-	// event.preventDefault();
+$(".crud-submit").click(function(event){
+	event.preventDefault();
     var form_action = $("#create-item").find("form").attr("action");
     var submit = $("#form_submit").serialize();
     $('#loading').fadeIn(500);
-    return false;
+
     // var valnama = $("#create-item").find("input[name='nama']").val();
     // var valjudul = $("#create-item").find("input[name='judul']").val();
     $.ajax({
@@ -172,10 +172,10 @@ $(".crud-submit").click(function(){
 	        $('#loading').fadeOut(500);
 		// console.log(data);
         },
-    }); 
+    });
 
 
-}); 
+});
 
 
 /* Remove Item */
@@ -199,11 +199,11 @@ $(".crud-submit").click(function(){
             // console.log(data);
             toastr.success('Berhasil di Delete.',{timeOut: 2000});
             $('.loading2').fadeOut(500);
-            
+
  		},
 	});
 });
-     
+
 
 
 /* Edit Item */
@@ -221,7 +221,7 @@ $("body").on("click",".edit-item",function(){
 
 /* Updated new Item */
 $(".crud-submit-edit").click(function(event){
-    event.preventDefault();
+		event.preventDefault();
     var form_action = $("#edit-item").find("form").attr("action");
     var Esubmit = $('#edit_form').serialize();
     // var valnama = $("#edit-item").find("input[name='nama']").val();
@@ -242,6 +242,7 @@ $(".crud-submit-edit").click(function(event){
 	        $(".modal").modal('hide');
 	        $('.loading2').fadeOut(500);
 	        toastr.success('Berhasil di update.', {timeOut: 2000});
+
     	},
     });
 });
